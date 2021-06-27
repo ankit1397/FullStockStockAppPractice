@@ -1,0 +1,19 @@
+<div class="">
+    <form #loginform="ngForm" (ngSubmit)="login(loginform); loginform.resetForm()" class="">
+        <h2 class="text-center">USER LOGIN</h2>
+        <div class="text-center">
+            <input type="text" class="form-control" name="username" placeholder="Username" required ngModel>
+            <input type="password" class="form-control" name="password" placeholder="Password" required ngModel>
+        </div>
+
+        <div class="text-center">
+            <input type="submit" class="" value="LOGIN">
+        </div>
+        <p class="loginErr" *ngIf="loginError && loginError.length > 0">
+            {{loginError}}
+        </p>
+    </form>
+    <div class="text-center">
+        <button (click)="register()">Register</button>
+    </div>
+</div>

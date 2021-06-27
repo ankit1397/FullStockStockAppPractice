@@ -1,0 +1,14 @@
+package controller;
+
+import org.springframework.web.bind.annotation.*;
+
+import model.StockData;
+import model.User;
+
+@RestController
+public class StockController {
+	@PostMapping("/upload")
+	public String upload(@Valid @RequestBody StockData data) {
+		return "success";
+	}
+}

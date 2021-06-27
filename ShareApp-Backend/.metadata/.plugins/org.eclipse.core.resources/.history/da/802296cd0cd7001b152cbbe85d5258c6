@@ -1,0 +1,5 @@
+package com.example.StockPractice.message;
+
+public class ResponseMessage {
+
+}

@@ -1,0 +1,18 @@
+package controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import model.StockData;
+import service.StockService;
+
+
+@RestController
+public class StockController {
+	
+	@Autowired StockService stockService;
+	
+	@PostMapping("/upload")
+	public StockData upload(@RequestBody StockData data) {
+		return stockService.upload(data);
+	}
+}

@@ -1,0 +1,39 @@
+package com.example.StockPractice.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class StockData {
+	
+	public StockData(long index, String string, float parseFloat, float parseFloat2, String string2, String string3,
+			String string4, int parseInt, String string5, String string6, String string7, String string8,
+			String string9, String string10, String string11) {
+	}
+
+	@Id
+	private long serialNo;
+	private String seriesReference;
+	private float period;
+	private float dataValue;
+	private String suppressed;
+	private String status;
+	private String units;
+	private int magnitude;
+	private String subject;
+	private String groupCol;
+	private String seriesTitleOne;
+	private String seriesTitleTwo;
+	private String seriesTitleThree;
+	private String seriesTitleFour;
+	private String seriesTitleFive;
+
+}

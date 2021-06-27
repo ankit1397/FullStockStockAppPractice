@@ -1,0 +1,16 @@
+<div class="">
+    <form #registerform="ngForm" (ngSubmit)="register(registerform); registerform.resetForm()" class="">
+        <h2 class="text-center">USER REGISTER</h2>
+        <div class="text-center">
+            <input type="text" class="form-control" name="username" placeholder="Username" required ngModel>
+            <input type="password" class="form-control" name="password" placeholder="Password" required ngModel>
+        </div>
+
+        <div class="text-center">
+            <input type="submit" class="" value="REGISTER">
+        </div>
+        <p class="registerErr" *ngIf="registerError && registerError.length > 0">
+            {{registerError}}
+        </p>
+    </form>
+</div>

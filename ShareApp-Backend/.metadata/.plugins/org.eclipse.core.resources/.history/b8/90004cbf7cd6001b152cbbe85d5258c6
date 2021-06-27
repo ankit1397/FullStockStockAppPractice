@@ -1,0 +1,19 @@
+package service;
+
+import model.User;
+
+public class UserServiceImpl implements UserService {
+
+	@Override
+	public String register(User user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String findByUsername(String username) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

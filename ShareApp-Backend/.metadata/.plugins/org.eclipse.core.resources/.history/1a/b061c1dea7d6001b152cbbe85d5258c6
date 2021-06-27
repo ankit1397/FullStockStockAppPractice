@@ -1,0 +1,28 @@
+package com.example.StockPractice.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.StockPractice.model.StockData;
+import com.example.StockPractice.service.StockService;
+
+
+@RestController
+public class StockController {
+	
+	@Autowired StockService stockService;
+	
+	@PostMapping("/upload")
+	public boolean upload(@RequestBody StockData data) {
+		try {
+			StockData uploadedData = stockService.upload(data);
+			return true;
+		}
+		catch(Exception e) {
+			System.out.println("Stockdata not uploaded");
+		}
+		return false;
+	}
+}

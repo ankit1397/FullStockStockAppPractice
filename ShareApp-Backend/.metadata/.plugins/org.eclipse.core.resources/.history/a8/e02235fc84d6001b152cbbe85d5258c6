@@ -1,0 +1,13 @@
+package controller;
+
+import org.springframework.web.bind.annotation.*;
+import model.StockData;
+
+
+@RestController
+public class StockController {
+	@PostMapping("/upload")
+	public String upload(@RequestBody StockData data) {
+		return "success";
+	}
+}
